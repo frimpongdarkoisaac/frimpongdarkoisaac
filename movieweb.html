@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie web</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+               
+            }
+            body{
+                background: black;
+            }
+           
+            .navigation{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: black;
+                padding: 2px 20px;
+                width: 100%;
+               
+               
+            }
+            .navigation ul{
+                list-style: none;
+                display: flex;
+                gap: 15px;
+                margin-right: 1px;
+                
+            }
+            .navigation a{
+                text-decoration: none;
+                color: white;
+                flex-direction: row;
+                
+            }
+            .underline:hover{
+                border-bottom: 8px solid darkred;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                transition: 3s;
+                
+            }
+            .color{
+                border: 1px solid transparent;
+                background: darkred;
+                padding: 0px 3px;
+                border-radius: 3px;
+            }
+            .color:hover{
+                opacity: 0.7;
+            }
+            strong{
+                color: darkred;
+            }
+            
+           
+            .logo{
+              color: white;
+                font-weight: bold;
+                letter-spacing: normal;
+            }
+            
+            @media (width:768px){
+                .navigation{
+                    display: flex;
+                    flex-direction: column;
+                    background: darkred;
+                    width: 21%;
+                    padding: 2px 5px;
+                    position: absolute;
+                    top: 44px;
+                    left: 1;
+
+                }
+                .navigation.active{
+                    display: block;
+                    flex-direction: column;
+                }
+                #icon{
+                    display: flex;
+                  cursor: pointer;
+                 
+                  
+                    
+       
+
+                }
+            }
+            .white-mode{
+      background-color: white;
+      color: black;
+  }
+            .items{
+                background-image: url(ea2a45b33fb02f31690b12e0921a3ac6.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 200px;
+               
+            }
+            .move{
+                padding-left: 20px;
+            }
+            #move{
+                margin-left: 20px;
+            }
+            .con{
+                color: white;
+                font-weight: bold;
+                padding: 60px 0px;
+            }
+            button{
+                background: darkred;
+                color: white;
+                border-radius: 3px;
+                padding: 1px 3px;
+            }
+            button:hover{
+                opacity: 0.7;
+            }
+            .con1{
+               background: rgb(36, 35, 35);
+               color: white;
+               display: flex;
+               align-items: center;
+               gap: 15px;
+               padding: 10px 0px;
+             
+            }
+            h3{
+                font-size: smaller;
+                padding-left: 20px;
+                transition: 4s ease-in-out;
+            }
+            h3:hover{
+               color: darkred;
+               opacity: 0.7;
+              
+
+            }
+            .movie-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 30px 9px;
+            }
+            .movie-container1{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 30px 9px;
+
+            }
+           
+            .movies{
+   position: relative;
+  
+  
+  
+              
+               
+           }
+
+           .image{
+               
+               width: 150px;
+               height: 100px;
+              
+           }
+           .overlay{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 150px;
+               height: 100px;
+               background: rgba(0,0,0,0.6);
+               color: white;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               opacity: 0;
+               transition: opacity 0.25s;
+           }
+           .overlay:hover{
+               opacity: 1;
+           }
+           .img-title{
+               font-size:15px;
+               font-weight: bold;
+
+           }
+           .img-info{
+               font-size: 1.25em;
+               margin-top: 0.25em;
+
+
+           }
+           h5{
+              color: white;
+              text-align: center;
+           }
+           .btn{
+               background: darkred;
+           }
+           .cons{
+               border: 4px solid darkred;
+              border-left: none;
+              border-right: none;
+               text-align: center;
+               align-self: center;
+               color: white;
+               font-size: small;
+               margin: 10px 0px;
+             
+               
+           }
+           .last{
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+           }
+           .words{
+               color: white;
+           }
+           .icons{
+               color: white;
+              
+           }
+           .fa-twitter,.fa-facebook,.fa-snapchat{
+            transition: 4s ease-in-out;
+
+           }
+           .fa-twitter:hover,.fa-facebook:hover,.fa-snapchat:hover{
+            border-radius: 50%;
+            background: darkred;
+            padding: 1px 1px;
+           
+           }
+          
+           
+            
+        </style>
+    </head>
+    <body>
+        <!-- movie web -->
+        <div class="container">
+            <div class="navigation">
+              
+                <div class="logo">MOG <strong>FILMS</strong></div>
+                <div class="bar">
+                    <ul>
+                        <li><a class="underline" href="">Home</a></li>
+                        <li><a class="underline" href="">Tv series</a></li>
+                        <li><a class="underline" href="">Movies</a></li>
+                        <li><a class="underline" href="">Gener</a></li>
+                        <li><a class="underline"><i class="fa fa-moon-o"></i></a></li>
+                        <li class="color"><a href="">sign In</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+                
+
+           
+
+            <div class="items">
+                <!--items will go here-->
+                <div class="con">
+                    <h2 class="move">The last witcher Hunter</h2>
+                    <p class="move">The mortal cursed with forvever life</p>
+                    <button id="move"><i class="fa fa-play"></i>Watch Now</button>
+
+                </div>
+               
+            </div>
+            <div class="con1">
+                <h3>Action</h3>
+                <h3>Adventure</h3>
+                <h3>Scifi</h3>
+                <h3>Horro</h3>
+            </div>
+            <div class="movie-container">
+                <!--0 one -->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4></h4>
+                    <div class="overlay">
+                        <h2>legacies</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+                <!--first one -->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4></h4>
+                    <div class="overlay">
+                        <h2>The Boys</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+                <!--second one-->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4></h4>
+                    <div class="overlay">
+                        <h2>See</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="movie-container1">
+                <!--0 one -->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4></h4>
+                    <div class="overlay">
+                        <h2>Flash</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+                <!--first one -->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4></h4>
+                    <div class="overlay">
+                        <h2>Superman</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+                <!--second one-->
+                <div class="movie-1">
+                    <div class="movies">
+                        <img class="image" src="Screenshot_20221223-041656.png">
+                    <h4>L</h4>
+                    <div class="overlay">
+                        <h2>Lucifer</h2>
+                        <p><i class="fa fa-play-circle" style="font-size:48px;"></i></p>
+                        <p>sbhdbhjdbdhjd</p>
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+          
+       <div class="cons">
+           <div class="borders">
+
+           </div>
+           <div class="tag">
+            <h1>Watch Now</h1>
+        </div>
+       </div>
+            
+        </div>
+        <footer>
+            <div class="last">
+                <div class="logo">MOG <strong>FILMS</strong></div>
+                <div class="words">
+                    <p>Your Home Of Superb Movies & Series</p>
+                </div>
+                <div class="icons">
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-snapchat"></i>
+                </div>
+            </div>
+
+        </footer>
+        
+    </body>
+</html>
