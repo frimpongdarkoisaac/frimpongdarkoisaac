@@ -1,0 +1,564 @@
+<!Doctype html>
+<htm lang="en">
+    <head>
+        <title>Nuts WEBSITE</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background: rgb(247, 232, 213);
+            }
+            .container{
+                background-color: rgb(19, 20, 20);
+               border-bottom-left-radius: 50px;
+            }
+            /* navbar and everyhting about it will be here */
+            .navbar{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+              
+            }
+            .items{
+                
+                display: flex;
+            }
+           .navbar .items li a{
+           color: white;
+               
+             
+           }
+          
+         
+           
+           
+           .items,a{
+               list-style: none;
+               gap: 5px;
+           }
+           
+            .navbar ul{
+                display: flex;
+                list-style: none;
+               
+               
+            }
+            .navbar li a{ 
+                text-decoration: none;
+                color: white;
+                margin: 0 5px;
+               
+
+            }
+            .logo{
+                border: 2px solid darkgreen;
+                border-radius: 5px;
+                color: whitesmoke;
+                padding: 0 2px;
+            }
+            strong{
+                color: green;
+            }
+            .fa-shopping-cart{
+                background: orange;
+                padding: 0px 3px;
+                border-radius: 2px;
+            }
+            /* content styling will be here */
+            .contentss{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .content1,.content2{
+
+            }
+              
+              
+            
+            h1{
+               width: 180px;
+               color: white;
+            }
+            p{
+                color: white;
+            }
+            span{
+                color: orange;
+            }
+            .first{
+                background: green;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                padding: 4px 4px;
+                color: white;
+            }
+            .second{
+                background: orange;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                padding: 4px 4px;
+                color: white;
+                
+            }
+            .image{
+                position: relative;
+                top: 45px;
+                padding-right: 8px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            /* other content will be here*/
+            .othercontent{
+                margin-top: 120px;
+            }
+            h3{
+                margin: 0px 3px;
+            }
+            .othercontent{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .nut1, .nut2, .nut3, .nut4{
+                border: 1px solid green;
+                background-color: white;
+                padding: 4px 4px;
+                color: rgb(124, 122, 122);
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                margin: 0px 3px;
+            }
+            input{
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+               height: 20px;
+               padding: 11px 0px;
+              margin-right: 8px;
+              border: 1px solid green;
+
+            }
+            /* finale contents*/
+            .finale11, .finale12{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 40px 0px;
+
+            }
+            .black{
+                color: black;
+            }
+            .green{
+                color: green;
+            }
+            .fa-star{
+                color: orange;
+            }
+            .finale1{
+                border: 1px solid transparent;
+                background-color: whitesmoke;
+                padding: 8px 11px;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                transition: all 0.3s;
+            }
+            .finale1:hover{
+                background: orange;
+                transform: translateY(5px);
+            }
+            button{
+                margin-left: auto;
+              margin-right: auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+                color: white;
+                background: green;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                border: none;
+                padding: 4px 4px;
+                
+            }
+            .finale13{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                background-color: white;
+                margin: 40px 0px;
+                padding: 30px 4px;
+            }
+             .orange{
+                background: orange;
+                margin-left: 13px;
+            }
+            .finale14{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: white;
+            }
+            .finale15{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 8px;
+                gap: 8px;
+                background: white;
+               
+                
+            }
+            .finale15-2{
+                border: 1px solid transparent;
+               background-color: rgb(247, 232, 213);
+               
+               
+               
+            }
+            #set{
+                padding: 8px 4px;
+                text-align: center;
+            }
+            .finale15-2 img{
+                width: 100%;
+                height: 100%;
+            }
+            .fa-arrow-circle-o-left, .fa-arrow-circle-o-right{
+                font-size: 1.8rem;
+            }
+            .fa-arrow-circle-o-left:hover, .fa-arrow-circle-o-right:hover{
+                color: orange;
+            }
+            h5{
+                text-decoration: underline orange;
+                color: orange;
+            }
+            .finale15-2{
+                transition: all 0.3s;
+               
+            }
+            
+            .finale15-2:hover{
+                transform: translateY(5px);
+            }
+            .finale16{
+                background-color: white;
+            }
+            .finale16-2{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                text-align: center;
+                gap: 6px;
+            }
+            .finale16-1{
+                text-align: center;
+            }
+            
+            .footer{
+              
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: rgb(247, 232, 213);
+               
+            }
+            .footer{
+                border-bottom: 4px solid orange;
+            }
+            #logo{
+                text-align: center;
+                border: 1px solid green;
+                border-radius: 5px;
+                
+            }
+            .dark{
+                color: rgb(124, 122, 122);
+            }
+            
+            .fa-facebook, .fa-twitter, .fa-instagram{
+                background: white;
+                border-radius: 50%;
+                color: black;
+                margin: 0px 2px;
+                padding: 1px 3px;
+               
+            }
+            
+            .board{
+                border: 1px solid white;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                background: white;
+               
+
+            }
+            .board input{
+                border: none;
+                outline: none;
+                background: none;
+               
+            }
+            b{
+                background: green;
+                border-top-right-radius: 9px;
+                border-bottom-left-radius: 9px;
+                color: white;
+                padding: 2px 2px;
+                
+            }
+           
+           
+          
+           
+          
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+               <div class="items">
+                   <li><a href="">Blogs</a></li>
+                   <li><a href="">About Us</a></li>
+                   <li><a href="">Clients</a></li>
+            </div>
+            <div>
+                <h2 class="logo">Nut<strong>s</strong></h2>
+            </div>
+               <ul>
+                   <li><a href="">Products</a></li>
+                   <li><a href="">Diaries</a></li>
+                   <li><a href="">Contact Us</a></li>
+                   <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+               </ul>
+              
+            </div>
+            <!--contents will be here -->
+            <div class="contents">
+                <div class="contentss">
+                    <div class="content1">
+                        <h1>The Nuts is good for you</h1>
+                        <p><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of <br>
+                            your life in a fun and engaging way<br></p><br>
+                            <strong class="first">learn More</strong> <strong class="second">N Products</strong>
+                    </div>
+                    <div class="content2">
+                        <img class="image" src="AlmondsNew_613x960.webp" height="250" alt="nut">
+                    </div>
+                </div>
+            
+               
+            </div>
+        </div>
+        <!--other content-->
+        <div class="othercontent">
+            <div class="othercontent1">
+                <h3>New product</h3><br>
+                <strong class="nut1">Nuts</strong> <strong class="nut2">Mixed Nuts</strong> <strong class="nut3">Peanuts</strong> <strong class="nut4">Other Nuts</strong>
+            </div>
+            <div class="othercontent2"><br><br>
+                <input type="text" placeholder="Search product">
+            </div>
+        </div>
+        <!--finale content-->
+        <div class="finale-contents">
+            <div class="finale11">
+                <div class="finale1">
+                   <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                   <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                   <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+            </div>
+            <div class="finale12">
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+                <div class="finale1">
+                    <img src="Remind-Me-Again-What-Are-the-Health-Benefits-of-Almonds-Exactly-GettyImages-1152030872-2000-1864e9b81e7742d09d15c8efa94ad55d.jpeg" height="50"><br>
+                    <br><br><br>
+                    <p class="black">Italin nut</p>
+                    <span class="green">$6.99</span>
+                    <h4> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h4>
+                </div>
+
+            </div>
+           <button>Load More</button>
+           <div class="finale13">
+               <div clas="13-1">
+                   <img src="nuts_mixes.jpeg" height="200">
+               </div>
+               <div clas="13-2">
+               <h3>About Us</h3>
+               <p class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                your life in a fun and<br> engaging way<br></p><br>
+                <button class="orange">learn More</button>
+            </div>
+           </div>
+           <div class="finale14">
+               <div class="final14-1">
+                   <h3 class="center">Our Blogs</h3>
+                   <p class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p><br>
+                    <img src="images (6).jpeg" width="400">
+                   <p></p><br>
+               </div>
+           </div>
+           <div class="finale15">
+               <div class="finale15-1">
+                 <i class="fa fa-arrow-circle-o-left"></i>
+               </div>
+               <div class="finale15-2">
+                   <img src="images (3).jpeg" height="50">
+                   <h4>Where the nut is a Pleasure</h4>
+                   <p id="set" class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p>
+                   <h5>Read More</h5>
+                   <br>
+               </div>
+               <div class="finale15-2">
+                <img src="images (3).jpeg" height="50">
+                <h4>Where the nut is a Pleasure</h4>
+                <p id="set" class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p>
+                <h5>Read More</h5>
+                <br>
+            </div>
+            <div class="finale15-2">
+                <img src="images (3).jpeg" height="50">
+                <h4>Where the nut is a Pleasure</h4>
+                <p id="set" class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p>
+                <h5>Read More</h5>
+                <br>
+            </div>
+            <div class="finale15-2">
+                <img src="images (3).jpeg" height="50">
+                <h4>Where the nut is a Pleasure</h4>
+                <p id="set" class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p>
+                <h5>Read More</h5>
+                <br>
+            </div>
+            <div class="finale15-1">
+                <i class="fa fa-arrow-circle-o-right"></i>
+              </div>
+           </div>
+        </div>
+        <div class="finale16">
+            <div class="finale16-1"><br><br>
+                <h3>Why Choose Us?</h3>
+                <p class="black"><span>lorem ipsum</span> Our superb Nuts<br> will give you a feeling of<br>
+                    your life in a fun and<br> engaging way<br></p>
+                   
+            </div><br><br>
+            <div class="finale16-2">
+                <div class="final16.1">
+                    <p><i class="fa fa-shopping-cart"></i><br><span class="black">100 + product</span></p>
+                    <p class="black"><span>lorem ipsum</span> Our superb Nuts<br></p>
+                    <i class="fa fa-arrow-circle-o-right"></i>
+
+                </div>
+                <div class="final16.1">
+                    <p><i class="fa fa-shopping-cart"></i><br><span class="black">100 + produc</span></p>
+                    <p class="black"><span>lorem ipsum</span> Our superb Nuts<br></p>
+                    <i class="fa fa-arrow-circle-o-right"></i>
+
+                </div>
+                <div class="final16.1">
+                    <p><i class="fa fa-shopping-cart"></i><br><span class="black">100 + product</span></p>
+                    <p class="black"><span>lorem ipsum</span> Our superb Nuts<br></p>
+                    <i class="fa fa-arrow-circle-o-right"></i>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <footer>
+            <div class="footer">
+                <div class="footer1">
+                    <h2 id="logo">Nut<strong>s</strong></h2>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p class="green">(0205553112)</p>
+                    <p class="black">help@nuts.com</p><br><br><br>
+                    <p><i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-instagram"></i></p>
+                </div>
+                <div class="footer2">
+                    <h2 class="">About</h2>
+                    <p class="dark">About Us</p>
+                    <p class="dark"> Contact Us</p>
+                    <p class="dark">FAQ</p>
+                    <p class="dark">Customer Service</p>
+                    <p class="dark">Stories</p>
+                    <p class="dark">D options</p>
+                </div>
+                <div class="footer3">
+                    <h2 class="">Delivery</h2>
+                    <p class="dark">Privacy Policy</p>
+                    <p class="dark">Terms and Conditions</p>
+                    <p class="dark">Guidance and information</p>
+                    <p class="dark">Blogs</p>
+                    <p></p><br>
+                    <p class="board"><input type="text" placeholder="Send mail"><b>Send Mial</b></p>
+                    <br>
+                </div>
+               
+            </div>
+          
+           
+        </footer><br>
+
+    </body>
+</html>
