@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login and signup form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+              margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+               
+            }
+            body{
+                margin-top: 30px;
+                 background-color: rgb( 107, 77, 228);
+                
+                
+            }
+            
+            .container{
+                position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background-color: lightgrey;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  padding: 1px 50px;
+  margin-top: 40px;
+            }
+
+            .container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+           
+            h1{
+                text-align: center;
+                color: rgb(24, 22, 22);  
+            }
+            h2{
+                color: rgb(24, 22, 22);
+                text-align: center;
+            }
+
+            
+            .glow:hover{
+               
+                text-decoration: underline rgb(107, 77, 228);
+                -webkit-animation: glow is ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out  infinite alternate;
+                
+            }
+            @-webkit-keyframes glow{
+                from{
+                    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #4a3dc7, 0 0 40px #4a3dc7, 0 0 50px #4a3dc7, 0 0 60px #4a3dc7, 0 0 70px #4a3dc7;
+
+
+                }
+                
+                to{
+                    text-shadow: 0 0 20px #fff, 0 0 30px #0b55f6, 0 0 40px #0b55f6, 0 0 50px #0b55f6, 0 0 60px #0b55f6, 0 0 70px #0b55f6, 0 0 80px #0b55f6,;
+                }
+            }
+            p{
+                border: 1px solid rgb(107, 77, 228);
+                text-align: center;
+                color: rgb(20, 19, 19);
+                border-top: none;
+                border-left: none;
+                border-right: none;
+             
+            }
+            input{
+                border: none;
+                outline: none;
+               background: none;
+               color: rgb(37, 34, 34);
+               padding-left: 3px;
+               padding-left: 10px; 
+            }
+            ::placeholder{
+                outline: none;
+                border: none;     
+                color: rgb(27, 25, 25);
+            }
+            a{
+                text-decoration: underline rgb(107, 77, 228);
+            }
+           .color{
+               color: rgb(29, 26, 26);
+           }
+           button{
+               margin: 0 115px;
+               background-color: rgb(107, 77, 228);
+               color: rgb(19, 17, 17);
+               padding: 1px 6px;
+               font-weight: bold;
+           }
+           .login,button:hover{
+    transform: translateY(5px);
+           }
+          
+           
+          
+           
+          
+           .new{
+               color: rgb(20, 18, 18);
+               padding-top: 20px;
+           }
+           .up{
+               text-decoration: underline rgb(107, 77, 228);
+               border-width: 2px;
+           }
+        </style>
+    </head>
+    <body>
+       
+        
+
+            <h2 class="glow">Youngster's Code: Your home of Code (HTML, CSS And A Little Javascript)</h2>
+       
+        <div  class="container">
+           
+            
+            <input type="checkbox" id="check">
+           
+            <div  class="login">
+                <form>
+               
+                <h1 class="glow">Login</h1><br><br>
+                <p><i class="fa fa-envelope"></i><input type="text" placeholder="Email"></p><br><br>
+                <p><i class="fa fa-eye"></i><input type="text" placeholder="Password" required></p><br><br>
+                <a class="color" href="#">Forgot password?</a><br><br>
+                <button  class="glow">LogIn</button><br>  
+                <div class="new" class="signup">
+                    <span class="signup">Non-Account?
+                        <label class="up" for="check">SignUp</label><br><br>
+                       </span>
+                  
+    
+                </div>
+                </form>
+              
+            </div>
+       
+           
+
+            <div  class="registration form">
+                <form>
+                <h1 class="glow">Signup</h1><br><br>
+
+               
+                    <P><input type="text" placeholder="Name"></P><br><br>
+                    <p><i class="fa fa-envelope"></i><input type="text" placeholder="Email"></p><br><br>
+                <p><i class="fa fa-eye"></i><input type="text" placeholder="Password" required></p><br><br>
+                <p><i class="fa fa-eye"></i><input type="text" placeholder="Confirm-Password" required></p><br><br>
+                <button id="move" class="glow">SingUp</button>
+               
+
+            
+
+                <div class="new" class="singup">
+                    <span class="signup">Existing-Account?
+                        <label class="up" for="check">LogIn</label><br><br>
+                       </span>
+
+                </div>
+                </form>
+
+            </div>
+       
+
+        </div>
+             
+        
+       
+        
+    </body>
+</html>
