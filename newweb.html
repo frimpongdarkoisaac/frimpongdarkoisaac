@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New web</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta value="" name="">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .nav{
+               
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 100;
+                overflow: scroll;
+            }
+            @media  (max-width: 760px) {
+                .nav{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            #nav-2{
+                display: flex;
+                align-items: flex-start;
+            }
+            .logo{
+                color: green;
+                font-weight: bolder;
+                padding-left: 6px;
+            }
+            #nav-2 a{
+                padding: 5px;
+                padding-left: 30px;
+                
+                
+               
+            }
+            #nav-2 a:hover{
+                text-decoration: underline green;
+               
+               
+              
+            }
+            .nav-2,.navbar{
+                display: flex;
+            }
+           .navbar,a{
+               list-style: none;
+               text-decoration: none;
+               margin-right: 4px;
+
+            }
+            .search-container{
+                position: relative;
+              
+            }
+            .fa-search{
+                color: green;
+            }
+            .search-icon{
+                cursor: pointer;
+            }
+            .search-bar{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 30px;
+                padding: 5px;
+                border-radius: 8px;
+               
+            }
+            input{
+                border-radius: 8px;
+                border: 1px solid green;
+               
+            }
+           
+            a{
+                color: black;
+                padding-right: 9px;
+            }
+            .nav{
+                width: 100%;
+               
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+           .container{
+               background: linear-gradient(to right,green 50%,yellow 50%);
+               margin: 90px 0px;
+              width: 100%;
+             
+           }
+           .content{
+               margin: 10px 0px;
+           }
+           
+           .items{
+            border: 2px solid transparent;
+               background: darkgreen;
+               width: 200px;
+              margin: 0 auto;
+              color: white;
+              padding: 10px 0px;
+              text-align: center;
+           
+           }
+           .btn{
+               border: 1px solid white;
+               border-radius: 8px;
+               padding: 2px 4px;
+               color: white;
+              
+              
+           }
+           .items1{
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               margin: 50px;
+               gap: 8px;
+              
+           }
+           .item0{
+               border: 1px solid transparent;
+               background: rgb(240, 188, 188);
+               padding: 5px 8px;
+           }
+           .item1{
+               border: 1px solid transparent;
+               background: rgb(240, 188, 188);
+               padding: 5px 8px;
+           }
+           .item2{
+               border: 1px solid transparent;
+               background: rgb(240, 188, 188);
+               padding: 5px 8px;
+           }
+           img{
+               border-radius: 50%;
+               padding: 0px 7px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div id="nav-2">
+                <h2 class="logo">Shopify</h2>
+                <a href="#">Categories</a>
+                <a href="#">deals</a>
+                <a href="#">Pricing</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="navbar">
+                
+                <a href=""><i class="fa fa-user"></i></a>
+                <a href=""><i class="fa fa-star"></i></a>
+
+                <div class="search-container">
+                    <div class="search-icon" onclick="toggleSearchBar()">
+                     <i class="fa fa-search"></i>
+                    </div>
+                    <form>
+                 
+                    <input type="search" id="search-bar" class="search-bar" placeholder="Search..." style="display: none;">
+                  </form>
+                  </div>
+                
+                  <script>
+                    function toggleSearchBar() {
+                      var searchBar = document.getElementById("search-bar");
+                      searchBar.style.display = (searchBar.style.display === "none" || searchBar.style.display === "") ? "block" : "none";
+                      searchBar.value = ""; // Clear the search bar when hiding it
+                    }
+                
+                    // Add a click event listener to the document to hide the search bar when clicking outside of it
+                    document.addEventListener("click", function (event) {
+                      var searchContainer = document.querySelector(".search-container");
+                      var searchBar = document.getElementById("search-bar");
+                
+                      // Check if the click event target is not inside the search container
+                      if (!searchContainer.contains(event.target) && searchBar.style.display === "block") {
+                        searchBar.style.display = "none";
+                      }
+                    });
+                  </script>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- things in container -->
+            <div class="content"><br>
+               <div class="items">
+                <h3>Get 5% Cash<br>Back On $200</h3>
+               <p>"Neque porro quisquam est qui dolorem ipsum quia dolor<br> sit amet, consectetur, adipisci velit..."<br>
+                "There is no one who loves pain itself,<br> who seeks after it and wants to have it,<br> simply because it is pain..."
+
+            </p><br>
+            <a href="" class="btn"> Learn More</a>
+               </div>
+               
+            </div>
+            <br>
+            
+        </div>
+        <div class="other-con">
+            <h2>Choose By Brand</h2>
+            <div class="items1">
+                <div class="item0">
+                    <strong><img src="coca-cola-popular-drink-brand-logo-vinnytsia-ukraine-may-16-202-free-vector.jpeg" height="20">Cocola<br>service within 24hrs</strong>
+
+                </div>
+                <div class="item1">
+                    <strong><img src="download (21).jpeg" height="20">Nestle<br>service within 24hrs</strong>
+                    
+                </div>
+                <div class="item2">
+                    <strong><img src="Netflix-Symbol.png" height="20">Netflix<br>service within 24hrs</strong>
+                    
+                </div>
+            </div>
+            <!--- second part -->
+            <div class="items1">
+                <div class="item0">
+                    <strong><img src="EA-Sports-Logo.png" height="20">Sports<br>service within 24hrs</strong>
+
+                </div>
+                <div class="item1">
+                    <strong><img src="download (22).jpeg" height="20">Bev<br>service within 24hrs</strong>
+                    
+                </div>
+                <div class="item2">
+                    <strong><img src="download (23).jpeg" height="20">NBC<br>service within 24hrs</strong>
+                    
+                </div>
+                
+            </div>
+            
+
+            </div>
+            <!--last things -->
+            <div class="last">
+                <h2>Get Up To 70% Off</h2>
+                <div class="finale">
+
+                </div>
+            </div>
+        </div>
+       
+    </body>
+</html>
