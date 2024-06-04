@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OneGallon Landing Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: whitesmoke;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+            }
+            .logo {
+                color: rgb(245, 12, 12);
+               font-weight: bold;
+               margin-left: 25px;
+               font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+               
+               
+               
+                
+            }
+            .logo,#logo{
+              position: relative;
+              bottom: 10px;
+             font-size: 1.8rem;
+           font-family: 'Times New Roman', Times, serif;
+          
+
+            }
+            .menu {
+                display: none;
+                color: black;
+                cursor: pointer;
+                margin-right: 20px;
+                font-size: 1.8rem;
+                position: relative;
+                bottom: 10px;
+            }
+            .links {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            .links li {
+                margin-right: 10px;
+            }
+            .links li:last-child {
+                margin-right: 0;
+            }
+            .links a {
+                text-decoration: none;
+                color: black;
+                margin-right: 10px;
+            }
+            a{
+                transition: all .3s;
+            }
+            .links b{
+                color: black;
+            }
+            a:hover{
+                color: rgb(110, 108, 108);
+
+            }
+            
+            
+            
+           .red:hover{
+               border-bottom: 1px solid red;
+              
+             
+           }
+            @media (max-width:768px) {
+                .menu {
+                    display: flex;
+                   
+                }
+                .red:hover{
+                    border: none;
+                    
+                }
+                .links {
+                    flex-direction: column;
+                    position: absolute;
+                    top: 50px;
+                    left: 300px;
+                   background-color: white;
+                    width: 36%;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    display: none;
+                    border-radius: 19px;
+                    
+                }
+                .links.active {
+                    display: flex;
+                }
+                
+                li,a{
+                    padding: 7px;
+                    padding-right: 20px;
+                    font-size: small;
+                }
+            }
+            h2{
+                color: black;
+                font-weight: bolder;
+                font-size: 1.8rem;
+            }
+            .ink{
+                color: rgb(56, 54, 54);
+            }
+            .size{
+                color: rgb(56, 54, 54);
+                opacity: 0.7;
+
+            }
+            .black{
+                color: black;
+            }
+          
+            .con{
+                margin: 0 auto;
+                text-align: center;
+            }
+            input{
+                padding: 10px;
+                border-radius: 9px;
+                min-width: 300px;
+                font-size: large;
+                border: 1px solid rgb(87, 85, 85);
+            }
+            button{
+                text-align: center;
+                padding: 6px;
+                font-size: large;
+                min-width: 315px;
+                margin-left: 22px;
+                border-radius: 9px;
+                font-weight: bold;
+                color: white;
+                background-color: rgb(245, 12, 12);
+                border: none;
+            }
+            .conone{
+                background-color: rgb(245, 12, 12);
+            }
+            .conone h3{
+                text-align: center;
+            }
+            .conone p{
+                color: white;
+                line-height: 1.6;
+               max-width: 90%;
+             margin: 0 auto;
+              text-align: center;
+                
+            }
+
+            h3{
+                font-weight: bolder;
+                color: white;
+                font-size: 1.5rem;
+                padding-bottom: 8px;
+            }
+            .conthreee{
+                background-color: rgb(245, 239, 239);
+
+            }
+            .conthree{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1px;
+                flex-wrap: wrap;
+            }
+            
+           
+            .conthreee .black,p{
+                margin-left: 40px;
+            }
+            .conthreee .black{
+                font-size: 1.7rem;
+               
+            }
+            .blackks{
+                margin-right: 500px;
+            }
+            @media (max-width: 768px){
+                .blackks{
+                    margin-right: 150px;
+                }
+                
+            }
+
+            .two{
+                margin-left: -9px;
+            }
+            .twos{
+                margin-left: 40px;
+            }
+            @media only screen and (min-width: 768px) {
+    .break {
+        display: block;
+
+        margin-left: 60px;
+    }
+    }
+    @media only screen and (max-width: 768px){
+        .breaak{
+            display: block;
+            margin-left: 60px;
+        }
+    }
+           
+            @media (max-width:726px){
+                .fours{
+                    margin-left: 38px;
+                }
+                .two{
+                    margin-left: 40px;
+                }
+                
+                
+
+            }
+           
+           
+          
+            img{
+                height: auto;
+                max-width: 100%;
+               
+             
+            }
+           .side{
+              display: flex;
+              gap: 25px;
+              flex-wrap: wrap;
+           }
+          
+           
+           @media (max-width: 726px) {
+               .side{
+                   display: block;
+               }
+               
+           }
+           
+          .move{
+              margin-left: 60px;
+          }
+          .one{
+              position: relative;
+              top: 8px;
+          }
+          .butt{
+              border: 1px solid  rgb(29, 28, 28);;
+             color:  rgb(29, 28, 28);;
+              background-color: white;
+              padding: 9px;
+
+          }
+          .border{
+             border: 1px solid  rgb(29, 28, 28);;
+             position: relative;
+             left: 4px;
+              
+          }
+          .fa-apple{
+              padding-left: 7px;
+              color: black;
+          }
+          .icons{
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+             
+          }
+          .first-container img{
+              width: 100%;
+              height: auto;
+
+          }
+          #iconfive{
+              transform: translate(0, -22px);
+          }
+      #iconfour{
+          transform: translate(0, -20px);
+      }
+          @media (max-width: 726px) {
+              .icons{
+                  display: block;
+              }
+              
+          }
+
+          .icone{
+              margin-left: 30px;
+          }
+          .huge{
+              font-size: 1.5rem;
+              margin-left: 40px;
+              font-weight: bold;
+          }
+          .buttt{
+              background-color: rgb(245, 12, 12);
+              color: white;
+              border-radius: 9px;
+          }
+          .others{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 8px;
+              flex-wrap: wrap;
+          }
+          .others{
+           margin-right: 390px;
+          }
+          @media (max-width: 768px) {
+              .others{
+                  margin: 0 auto;
+              }
+              
+          }
+
+          .call{
+              position: relative;
+              bottom: 8px;
+          }
+          .strongs{
+              color: black;
+              font-weight: bold;
+              font-size: 1.5rem;
+
+          }
+          
+          @media (max-width: 726px){
+              .strongs{
+                  margin-left: 150px;
+
+
+              }
+          }
+          .containerss{
+              background-color: rgb(245, 239, 239);
+          }
+          .containerss .strong{
+              margin-left: 50px;
+          }
+          .it{
+            margin-left: 50px;
+            margin-right: 50px;
+
+          }
+          
+          .it{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+             border-bottom: 1px solid rgb(228, 221, 221);
+             padding: 8px 0px;
+             color: black;
+             font-size: large;
+          }
+          #its{
+              border: none;
+              border: 0;
+          }
+         
+          .arrow{
+              transition: all .3s;
+              cursor: pointer;
+              color: rgb(110, 108, 108);
+          }
+          .arrow:active{
+              transform: rotate(90deg);
+          }
+        
+          .odd{
+              background-color: rgb(245, 12, 12);
+              color: white;
+              display: flex;
+            
+              flex-wrap: wrap;
+              gap: 8px;
+          }
+
+          .odd .strong{
+              color: white;
+              margin-left: 45px;
+             
+          }
+          
+          @media (max-width: 768px){
+              .odd .strong{
+                  margin-left: 50px;
+              }
+              .odd p{
+                  margin-left: 45px;
+              }
+             .form {
+                 margin-right: 160px;
+             }
+             .odd button{
+                 margin-left: 40px;
+                max-width: 100%;
+                padding: 10px 90px;
+
+             }
+            
+            
+          }
+          
+          .form button{
+              background-color: white;
+              color: rgb(245, 12, 12);
+              border: 4px solid red;
+              min-width: 110px;
+              text-align: center;
+              margin-left: 40px;
+          }
+          
+          .form input{
+              border: 1px solid white;
+              outline: none;
+              background-color: rgb(245, 12, 12);
+              color: white;
+            
+             
+             
+          }
+          .form ::placeholder{
+              border: none;
+              outline: none;
+             color: white;
+             
+          }
+          .confooter{
+              display: flex;
+              flex-wrap: wrap;
+          }
+          .confooter #button{
+              min-width: 100px;
+             transform: translate(-8px, 0px);
+          }
+          @media (max-width: 768px){
+              .confooter{
+                  display: block;
+              }
+             
+              .confooter #button{
+                 padding: 10px 155px;
+                transform: translate(-22px, 0px);
+                margin-top: 5px;
+                
+              }
+          }
+          .footfour{
+              display: flex;
+              justify-content: space-between;
+              flex-direction: row;
+          }
+          .fa-facebook,.fa-twitter,.fa-instagram{
+              border: 2px solid black;
+              border-radius: 50%;
+             padding: 5px 5px;
+          }
+          @media (max-width: 768px){
+              .terms{
+                  margin: 8px;
+                  display: block;
+
+              }
+              .fa-facebook,.fa-twitter,.fa-instagram{
+                transform: translate(-97px, 0px);
+              }
+          }
+          @media (min-width: 768px) {
+              .container-con p{
+            position: relative;
+            bottom: 390px;
+          
+              }
+              
+          }
+         
+         
+          
+          .container-con p{
+              transform: translate(0, -250px);
+              color: white;
+              font-weight: 200;
+          }
+          .container-con .con-image{
+              width: 100%;
+              height: auto;
+
+          }
+         
+          .container-con .cons-image{
+              width: 20px;
+              height: auto;
+
+          }
+         
+          .fuell{
+              font-size: 2rem;
+          }
+          
+          .container-con .cons-image{
+              width: 25px;
+              height: auto;
+            
+          }
+          .container-con .conss{
+              font-size: small;
+              
+          }
+          .conss{
+              display: flex;
+              align-items: center;
+            padding: 5px 25px;
+            border: 2px solid whitesmoke;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+          .together{
+          display: flex;
+          
+          }
+          .fuel{
+              font-size: 20px;
+          }
+          .conss:hover{
+          background-color: rgb(167, 162, 162);
+          }
+       
+          
+          
+        
+        
+         
+         
+      
+
+          
+          
+
+           
+          
+          
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo"><img src="logopinto.png"><strong id="logo">OneGallon</strong></div>
+            <div class="menu" id="menu">&#9776;</div>
+            <ul class="links">
+                <li><a href="#"><r class="red">Ho</r>me</a></li>
+                <li><a href="#"><r class="red">Ab</r>out Us</a></li>
+                <li><a href="#"><r class="red">Ho</r>w it works</a></li>
+                <li><a href="#"><r class="red">FA</r>QS</a></li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const menuIcon = document.getElementById('menu');
+                const navLinks = document.querySelector('.links');
+
+                menuIcon.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            });
+        </script>
+
+       <div class="container-con">
+         <img class="con-image" src="pintofinaleimage_cleanup.png">
+         <p class="fuell">We give you the time<br>to do the things that matter</p><br>
+           <p class="fuel">Fuel delivery and time-saving</p>
+           <br>
+         <div class="together">
+             <p class="conss"><img class="cons-image" src="pintoapple.png"><h id="uppp">Available On<br> App Store</h></p>
+             <p class="conss"><img  class="cons-image" src="pintoplaystore.png"><h id="uppp">Available On<br> Play Store</h></p>
+         </div>
+         
+            
+
+       </div>
+          
+       
+        <div class="con-image">
+            <!--text and images-->
+        </div>
+        <div class="con">
+            <h2 class="black"><strong>OneGallon price estimator</strong></h2>
+            <p class="ink">Sample delivery prices are estimates only and do not reflect<br> variations due to discounts, geography, traffic delays, or<br>
+                other factors.<strong class="black">Flat rates and minimum fees may apply.</strong></p>
+
+                <p>Actual prices for deliveries may vary.</p><br>
+
+                <p class="black"><strong>Destination</strong></p><br>
+
+                <p><input type="text" placeholder=" Enter destinaton"></p><br>
+
+                <p class="black"><strong>Use current location</strong></p>
+                <p class="size">For perfect pickup experience</p><br>
+
+                <p class="black"><strong>Set location on map</strong></p><br>
+
+                <button class="but">Confirm</button>
+        </div><br><br>
+       <div class="conone"><br><br><br>
+        <h3><storng>About Us</storng></h3>
+        <p>
+            OneGallon provides fuel delivery in small and large quantities on an auto-fill or emergency demand basis wherever you are and
+        at your<br class="break-on-small"> convenience with just a few taps on the phone. For companies, whether you’re in construction or oil and gas that require
+        bulk fuel<br> OneGallon has you covered. We ensure that you always have fuel<br> when and where you need it.<br><br><br>
+       </p>
+       </div>
+       
+        <div class="conthreee">
+            <br><br><br>
+            <p class="black"><strong>We help save your most
+                <br>precious time</strong></p>
+                <p>OneGallon helps you break free from the petrol station. Saving you<br> time, by bringing fuel to you, anytime, anywhere.</p><br><br>
+            <div class="conthree">
+           
+                <div class="conthrees"><img src="pinto.png" class="imagess" alt="image"></div>
+                <div class="conthrees"><p class="down"><strong class="black blackks">We'll keep you moving</strong></p><br>
+                   <div class="side">
+                  <div class="sideone"><p class="four"><img class="one" src="checker1.png"  alt="checker">Save time and beat the queues</p></div>
+                   <div class="sidetwo"><img class="one fours" src="checker1.png" alt="checker">24/7 petrol and diesel delivery</div>
+                   </div>
+                   <div class="side">
+                   <div class="sideone sideonesss"><img class="one twos" src="checker1.png" alt="checker"><v class="movess">Same price as the petrol station,<r class="break">pay for only the<r class="breaak"> delivery fee</r></r></v></div>
+                  <div class="sidetwo"><img class="one two" src="checker1.png" alt="checker">Order and pay on the app</div></p></div><br><br>
+    
+                  <button class="butt">Download the App on<v class="border"></v><i class="fa fa-apple"></i><i class="fa fa-playstore"></i></button><br><br><br>
+                   </div>
+    
+                   
+            </div>
+        </div><br><br>
+        <div class="othercon">
+            <h2 class="huge">It's easy as ABC</h2><br>
+            <div class="icons">
+                <div class="icon1"><img src="pintophone.png" class="icone" alt="icon"><p><strong class="black">Get the app</strong><br><br>Download the app and start saving time<br> with onegallon</p></div><br>
+                <div class="icon1"><img src="pintotrash.png" class="icone" alt="icon"><p><strong class="black">Book</strong><br><br>Open the app and select fuel and delivery<br> point</p></div><br>
+                <div class="icon1"><img src="pintocar.png"  class="icone"alt="icon"><p><strong class="black">Pay</strong><br><br>Enter and select your fuel type,enter<br> quantity and make payment</p></div><br>
+                <div class="icon1"><img src="pintophone1.png" id="iconfour"  class="icone" alt="icon"><p id="iconfive"><strong id="bblackk" class="black">Get the app</strong><br><br>Download the app and start saving time<br> with onegallon</p></div><br>
+              
+            </div>
+        </div><br><br>
+
+        <h2 class="huge">How it works</h2><br><br><br>
+
+        <div class="others">
+            <div class="imagefive">
+                <p class="imagefivee">1. Download the app from Playstore or AppStore depending on your<br> mobile device</p><br>
+                <p class="imagefivee">2. Tell us where you are.</p><br>
+                <p class="imagefivee">3. Tell us what type of Plan you want</p><br>
+                <p class="imagefivee">4. Enter the quantity you want</p><br>
+                <p class="imagefivee">5. Pay and Place your order</p>
+                <br><br>
+                <button class="buttt"><img src="new.png"><d class="call">call to place older</d></button><br><br>
+                <p class="strong strongs">+233 (0) 242439874</p>
+
+
+            </div>
+            <div class="words">
+                <img src="PINTODOUBLEPHONE.PNG" alt="doublephone">
+            </div>
+        </div>
+        
+
+
+        <div class="containerss">
+            <br><br>
+            <h2 class="strong">FAQ</h2>
+
+            <div class="it">
+                <div class="itemsfive">
+                    <br>
+                    <p><li>How to request a ride?</l></p>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p class="arrow">></p>
+                        
+                </div>
+            </div>
+            <br>
+
+            <div class="it">
+                <div class="itemsfive">
+                    <p><li>How are the tariffs calculated?</l></p>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p  class="arrow">></p>
+                        
+                </div>
+            </div>
+            <br>
+            <div class="it">
+                <div class="itemsfive">
+                    <p><li>How long is your delivery time ?</l></p>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p  class="arrow">></p>
+                        
+                </div>
+            </div>
+            <br>
+            <div class="it">
+                <div class="itemsfive">
+                    <p><li>What is terms of payment?</l></p>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p  class="arrow">></p>
+                        
+                </div>
+            </div>
+            <br>
+            <div class="it">
+                <div class="itemsfive">
+                    <p><li>What is the mode of payment?</l></p>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p  class="arrow">></p>
+                        
+                </div>
+                
+            </div>
+            <br>
+            <div id="its" class="it">
+                <div class="itemsfive">
+                    <p><li>What are OneGallon's hours of operation?</l></p>
+                        <br><br><br>
+                        
+                </div>
+                <div class="itemsfive">
+                    <p  class="arrow">></p>
+                        <br><br><br>
+                </div>
+              
+            </div>
+        </div>
+
+        <div class="odd">
+            <div class="paragrah">
+                <br><br><br>
+                <h2 class="strong">Contact Us</h2>
+                <br><br>
+                <p style="font-size: larger;">Questions & Support</p><br>
+                <P>Need help with one of our services, or have a query about your account?</P><br>
+                <p>Drop us a message and we'll be there for you</p>
+
+            </div><br><br>
+            <div class="form">
+                <br><br>
+                <p class="line"><input type="text" placeholder="Name*"></p><br>
+               <p class="line"><input type="text" placeholder="Email*"></p><br>
+               <p class="line"><input type="text" placeholder="Phone*"></p><br>
+               <p class="line"><input type="text" placeholder="Message*"></p><br>
+               <button class="diff">send</button>
+                <br><br><br>
+
+
+               
+                
+            </div>
+           
+        </div>
+<br><br>
+        <div class="footer">
+            <div class="logo"><img src="logopinto.png"><strong id="logo">OneGallon</strong></div>
+
+            <div class="confooter">
+                <div class="footone">
+                    <p>Home</p><br>
+                    <p>About Us</p><br>
+                    <p>Price Estimate</p><br>
+                    <p>How it works</p><br><br>
+                </div>
+                <div class="foottwo">
+                    <p>FAQs</p><br>
+                    <p>Careers</p><br>
+                    <p>Contact Us</p><br><br>
+                </div>
+                <div class="footthree">
+                    <p>Be the first to hear our news</p><br>
+                    <p><input type="text" pattern="a-z" placeholder="Email Address"><button id="button">Send</button></p>
+                    <br><br>
+
+                </div>
+            </div>
+            <div class="footfour">
+                <div class="footfourone">
+                    <p>© 2023 OneGallon - All rights reserved
+
+                        <c class="terms">Terms & Privacy</c></p>
+                </div>
+                <div class="footfourtwo">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+                </div>
+
+        </div>
+      
+        
+
+      <br>
+    </body>
+</html>
+
+
