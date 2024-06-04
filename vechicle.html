@@ -1,0 +1,554 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Vehicle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        
+       
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow-x: hidden;
+            }
+           
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 2px 0px;
+              
+            }
+            
+            nav,ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+                gap: 8px;
+               
+            }
+            nav,li{
+                color: black;
+                text-decoration: none;
+            }
+            nav,a{
+                text-decoration: none;
+                color: black;
+                margin: 0px 3px;
+                
+            }
+            .logo{
+                background: rgb(77, 19, 131);
+                color: white;
+                padding: 0px 5px;
+                letter-spacing: 5px;
+               
+            }
+            s{
+                color: black;
+                font-family: sans-serif;
+                font-weight: 100;
+            }
+            nav,a{
+                transition: all 3s;
+            }
+            nav,a:hover{
+                background: rgb(77, 19, 131);
+                border-radius: 6px;
+            }
+           
+            @media (max-width: 756px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    ul {
+        width: 100%;
+        text-align: center;
+    }
+    nav,ul{
+        padding: 10px;
+    }
+    li {
+        margin: 8px 0;
+    }
+}
+
+            
+          
+            .icon{
+                background: rgb(243, 241, 241);
+                border-radius: 6px;
+                border: 5px solid rgb(243, 241, 241);
+                box-shadow: rgb(243, 241, 241);
+            }
+            .fa-user{
+                color: rgb(77, 19, 131);
+            }
+            .content{
+                background: rgb(77, 19, 131);
+                padding-bottom: 90px;
+                width: 100%;
+                margin-top: 20px;
+
+            }
+           
+            
+            h2{
+                margin-left: 11px;
+                color: rgb(243, 241, 241);
+                width: 190px;
+               
+            }
+            .con{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background: rgb(243, 241, 241);
+                width: 380px;
+                padding: 5px 0px;
+                
+            }
+            @media  (max-width: 726px) and (mini-width: 726px){
+                .con{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                }
+            }
+            
+            
+           
+            
+            
+            
+            .search{
+                border: 2px solid rgb(77, 19, 131);
+                border-radius: 6px;
+                color: white;
+                background-color: rgb(77, 19, 131);
+               
+                padding: 5px;
+                margin: 10px 0;
+               
+            }
+            input{
+                border: 0;
+                outline: 0;
+                background-color: rgb(77, 19, 131);
+                color: rgb(243, 241, 241);
+            }
+            ::placeholder{ 
+                color: rgb(243, 241, 241);
+            }
+            .page{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .border{
+                border: 1px solid black;
+                padding: 2px 5px;
+            }
+            .symbols{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 5px 0px;
+                transition: all .35s;
+            }
+            .symbols1:hover{
+               padding: 3px 4px;
+               border-radius: 50%;
+               background-color: rgb(77, 19, 131);
+
+            }
+            .image-con{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 5px 5px;
+                flex-wrap: wrap;
+            }
+            .color{
+                color: grey;
+            }
+           .imag1-one{
+               border: 1px solid whitesmoke;
+               background-color: whitesmoke;
+               box-shadow: rgb(243, 241, 241);
+               padding-bottom: 7px;
+               text-align: center;
+               margin: 5px;
+           }
+          
+            .items{
+                display: flex;
+                justify-content: space-between;
+               margin-right: 100px;
+               margin-left: 80px;
+               margin-top: 25px;
+              
+           }
+               
+           
+           
+           
+           @media (max-width: 756px){
+            .items{
+                display: flex;
+                justify-content: space-between;
+               margin-right: 34px;
+               margin-left: 30px;
+               margin-top: 25px;
+              
+           }
+           
+           }
+           .one{
+               position: relative;
+               top: 0;
+               left: 40px;
+               
+           }
+           @media (min-width:756px) {
+            .one{
+               position: relative;
+               top: 0;
+               left: 88px;
+               
+           }
+               
+           }
+           .items, .imagess {
+            margin-bottom: 20px;
+           }
+           .imagess{
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+               flex-wrap: wrap;
+               margin: 10px;
+               text-align: center;
+           }
+           .two{
+               border: 1px solid rgb(166, 109, 219);
+               filter: brightness(5px);
+               border-radius: 5px;
+               background-color: rgb(166, 109, 219);
+               color: blueviolet;
+               padding: 1px 2px;
+           }
+           
+           
+           .imag1{
+            border: 1px solid whitesmoke;
+               background-color: whitesmoke;
+               box-shadow: rgb(243, 241, 241);
+               padding-bottom: 15px;
+               text-align: center;
+               margin: 5px;
+           }
+           h5,b{
+               padding: 5px;
+           }
+           .finale{
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+               margin: 5px 0px;
+               text-align: center;
+               margin: 6px;
+           }
+           .last{
+            display: flex;
+                justify-content: space-between;
+               margin-right: 100px;
+               margin-left: 80px;
+               margin: 50px;
+               text-align: center;
+
+           }
+           
+           @media (max-width: 756px){
+            .last{
+                display: flex;
+                justify-content: space-between;
+               margin-right: 34px;
+               margin-left: 30px;
+               margin-top: 25px;
+               text-align: center;
+              
+           }
+           
+           }
+           .lastthree{
+            border: 1px solid rgb(241, 237, 237);
+               background-color: whitesmoke;
+               box-shadow: rgb(243, 241, 241);
+               padding-bottom: 1px;
+               text-align: center;
+               margin: 5px;
+               transition: all .35s;
+               padding-left: 10px;
+               padding-right: 10px;
+              
+              
+
+           }
+           .icon{
+               color: whitesmoke;
+               text-align: center;
+               transition: all .35s;
+               padding-left: 9px;
+           }
+           .icon:hover{
+            color: rgb(77, 19, 131);
+            font-size: large;
+           }
+           
+           
+           .recent{
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+               flex-wrap: wrap;
+               margin: 5px;
+              
+           }
+           .round{
+               border-radius: 50%;
+           }
+           .name{
+               position: relative;
+               top: -10px;
+               left: 5px;
+             
+           }
+           footer{
+               background-color: rgb(77, 19, 131);
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+               width: 100%;
+               padding: 20px;
+           }
+           footer p, footer h4 {
+           margin-bottom: 10px;
+          }
+           footer p{
+               color: grey;
+           }
+           footer h4{
+               color: black;
+               font-weight: 100;
+           }
+           #finale{
+               background-color: rgb(240, 235, 235);
+               display: flex;
+               align-items: center;
+               justify-content: space-around;
+           }
+           
+         
+            
+           
+
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <labe class="logo"><s>V</s>hicl<s>e</s></labe>
+            <ul>
+                <li><a href="#">Used-Cars</a></li>
+                <li><a href="#">Sell-Cars</a></li>
+                <li><a href="#">New-Cars</a></li>
+                <li><a href="#">Support</a></li>
+                <li class="icon"><a href="#"><i class="fa fa-user"></i> Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h2>Find your next awesome vechicle</h2>
+                <div class="con">
+                    <div class="con1">
+                        <p class="first">Used/New<i class="fa fa-arrow-o"></i></p>
+                    </div>
+                    <div class="con1-1">
+                        <p>Model<i class="fa fa-arrow-o"></i></p>
+                    </div>
+                    <div class="con1-2">
+                        <p>Price<i class="fa fa-arrow-o"></i></p>
+                    </div>
+                    <div class="con1-3">
+                        <p class="search"><i class="fa fa-search"></i><input type="text" placeholder="search"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="symbols">
+            <div class="symbols1">
+                <img src="download (27).jpeg" height="40" width="40">
+            </div>
+            <div class="symbols1">
+                <img src="BMW-Logo-1963.png" height="40" width="40">
+            </div>
+            <div class="symbols1">
+                <img src="Hyundai-Logo.png" height="40" width="40">
+            </div>
+            <div class="symbols1">
+                <img src="9ca7bb4420b01fa83b7f343bb3e5962f.jpeg" height="40" width="40">
+            </div>
+        </div>
+        <h3 class="one">Trending near you</h3>
+        <div class="image-con">
+            <div class="imag1-one">
+               <h5><img src="images (24).jpeg" height="110"><br><b>Used cars under $15000</b><br><b class="color">724,77 vehicles</b></h5>
+
+            </div>
+            <div class="imag1-one">
+                <h5><img src="download (25).jpeg" height="110"><br><b>Used cars under $6000</b><br><b class="color">542,57 vehicles</b></h5>
+            </div>
+            <div class="imag1-one">
+                <h5><img src="download (26).jpeg" height="110"><br><b>Toyota models 2021</b><br><b class="color">194,47 vehicles</b></h5>
+            </div>
+            <div class="imag1-one">
+                <h5><img src="images (25).jpeg" height="110"><br><b>Compact SUVs</b><br><b class="color">327,88 vchicles</b></h5>
+            </div>
+        </div>
+       <div class="items">
+        <div class="items1">
+            <h3>Find car by model</h3>
+           </div>
+           <div class="items1">
+            <h3>1/6 <span class="border">&#8592;</span>  <span class="border">&#8594;</span></h3>
+           </div>
+       </div>
+        <div class="imagess">
+            <div class="imag1">
+                <h5><img src="images (23).jpeg" height="110"><br><b >Sedan</b><br> <b class="two"><br>212,345 vehicles</b></h5>
+
+            </div>
+            <div class="imag1">
+                <h5><img src="download (25).jpeg" height="110"><br><b>SUV</b><br> <b class="two"><br>567,123 vehicles</b></h5>
+
+            </div>
+            <div class="imag1">
+                <h5><img src="images (24).jpeg" height="110"><br><b>Coupe</b><br> <b class="two"><br>691,456 vechicles</b></h5>
+
+            </div>
+            <div class="imag1">
+                <h5><img src="images (25).jpeg" height="110"><br><b>Hatchback</b><br> <b class="two"><br>984,325 vehicle</b></h5>
+
+            </div>
+
+        </div>
+        <div class="last">
+            <div class="last1">
+                <p>Explore best selling car makes</p>
+            </div>
+            <div class="last1">
+                <p>Ipsum is simply dummy texLoremt of best selling car website and
+                    <br>the printing and typesetting industry
+                   </p>
+            </div>
+        </div>
+        <div class="lastwork">
+           <div class="finale">
+            <div class="lastthree">
+                <h5><img src="download (2).png" height="40"><br>Toyota <br><br><span class="icon">&#8594;</span></h5>
+            </div>
+            <div class="lastthree">
+                <h5><img src="download (27).jpeg" height="40"><br>Benz  <br><br><span class="icon">&#8594;</span></h5>
+            </div>
+            <div class="lastthree">
+                <h5><img src=" 9ca7bb4420b01fa83b7f343bb3e5962f.jpeg" height="40"><br>Honda <br> <br><span class="icon">&#8594;</span></h5>
+            </div>
+            <div class="lastthree">
+                <h5><img src="BMW-Logo-1963.png" height="40"><br>BMW  <br><br><span class="icon">&#8594;</span></h5>
+            </div>
+           </div>
+        </div>
+
+        <h3 class="one">Recent reviews</h3>
+        <div class="recent">
+            <div class="last3">
+                <h5><img src="download (25).jpeg" height="110"><br>2021 Cadillac Escalade</h5>
+                <p>hdhjbdhjbdhjdbdhj</p>
+                <p><img class="round" src="download (17).jpeg" height="40"><span class="name">Isaac</span><br><b>Chief Executive</b></p>
+            </div>
+            <div class="last3">
+                <h5><img src="download (26).jpeg" height="110"><br>2021 Hyundai Elantra</h5>
+                <p>hdhjbdhjbdhjdbdhj</p>
+                <p><img class="round" src="download (18).jpeg" height="40"><span class="name">Eva</span><br><b>News Editor</b></p>
+
+            </div>
+            <div class="last3">
+                <h5><img src="images (24).jpeg"height="110"><br>2021 Benz GLA250</h5>
+                <p>hdhjbdhjbdhjdbdhj</p>
+                <p><img class="round" src="download (19).jpeg" height="40"><span class="name">David</span><br><b>Chief Editor</b></p>
+            </div>
+
+            <div class="last3">
+                <h5><img src="images (25).jpeg"height="110"><br>2021 Benz GLA250</h5>
+                <p>hdhjbdhjbdhjdbdhj</p>
+                <p><img  class="round"src="download (17).jpeg" height="40"><span class="name">Francis</span><br><b>Chief Consultant</b></p>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="foot1">
+                <h4>About</h4>
+                <p>.How it works</p>
+                <p>.Career</p>
+                <p>.Meida</p>
+                
+            </div>
+            <div class="foot2">
+                <h4>Community</h4>
+                <p>.A D</p>
+                <p>.Invite Friends</p>
+                <p>.Gift Cards</p>
+            </div>
+            <div class="foot3">
+                <h4>Business Seller</h4>
+                <p>.Add your Vehicle</p>
+                <p>.Business Accountant</p>
+                <p>.Resource Center</p>
+            </div>
+            <div class="foote4">
+                <h4>Booking Support</h4>
+                <p>.Help Center</p>
+                <p>.Support</p>
+                <p>.Trust & Safety</p>
+            </div>
+        </footer>
+        <div id="finale">
+            <div class="foot5">
+                <h6>Privacy Policy</h6>
+            </div>
+            <div class="foot5">
+                <h6>Terms of Use</h6>
+            </div>
+            <div class="foot6">
+                <h6>©2023 All rights reserved </h6>
+                
+            </div>
+        </div>
+        
+        
+       
+    </body>
+
+</html>
