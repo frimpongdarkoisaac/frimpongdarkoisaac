@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> website fiver clone</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            }
+           
+            .container{
+                background-color: orange;
+                padding-bottom: 120px;
+                transition: background-color 1s;
+            }
+            .nav {
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            content: ( '' );
+        }
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        strong{
+            color: green;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+        }
+
+        
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav li {
+            margin-right: 20px;
+           
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        a:hover{
+                color: green;
+                transition: 3s;
+            }
+      
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: flex;
+                
+            }
+            
+
+            .nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+               top: 60px;
+                left: 0;
+                background-color: #212121;
+               width:  20%;
+               padding: 8px 6px;
+                text-align: center;
+                transition: all .5s;
+                transform: translateX(5px);
+                
+               
+              
+               
+            }
+
+            .nav ul.active {
+                display: flex;
+            }
+        }
+
+        
+        li a{
+          
+        }
+        .square{
+            border: 1px solid white;
+            padding: 0px 2px;
+        }
+       
+            
+        .cons{
+            display: flex;
+            margin: 180px 0;
+            justify-content: space-between;
+            
+        }
+        .images{
+          margin-right: 35px;
+          position: relative;
+          bottom: 50px;
+        }
+        h2{
+            color: white;
+            font-size: 25px;
+        }
+        p{
+         width: 300px;
+            background: none;
+            background: white;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+           
+        }
+        .fa-search{
+            background: green;
+            color: white;
+            padding: 6px 2px;
+          margin-left: 148px;
+          border-radius: 3px;
+
+          
+           
+        }
+        input{
+            background: none;
+            border: 0;
+            text-decoration: none;
+            outline: none;
+            padding-left: 5px;
+          
+           
+        }
+        img{
+            border-radius: 5px;
+           
+          
+        }
+        ::placeholder{
+            background: none;
+            border: 0;
+            text-decoration: none;
+            color: rgb(165, 161, 161);
+        }
+        .text{
+            padding-left: 4px;
+        }
+        .popular{
+            display: flex;
+            align-items: center;
+            color: white;
+           
+        }
+        .border-1,.border-2,.border-3{
+            border: 1px solid white;
+            border-radius: 5px;
+            color: wheat;
+            margin: 0 3px;
+            padding: 0 3px;
+        }
+        .border-1:hover,.border-2:hover,.border-2:hover,.border-3:hover{
+            color: green;
+            transition: 3s;
+        }
+        .others{
+            display: flex;
+              background-color: rgb(238, 227, 227);
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0px;
+            color: rgb(190, 187, 187);    
+        }
+        .other-1,.other-2,.other-3{
+            margin: 0 7px;
+        }
+        .another-con{
+            background: whitesmoke;
+            margin: 60px 0;
+            
+        }
+        .another-con1{
+            display: flex;
+            justify-content: space-around;
+            padding: 4px 0;
+        }
+        .pop{
+          margin-left: 10px;
+        }
+        .another-1{
+            transition: 3s ease-in-out;
+        }
+        .another-1:hover{
+          transform: scale(1.1);
+           
+
+        }
+        footer{
+            background-color: rgb(238, 227, 227);
+            color: rgb(190, 187, 187);  
+            padding: 10px 0px;
+            text-align: center;
+           margin-top: 100px;
+        }
+        .social{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 2px solid   rgb(190, 187, 187); ;
+          
+           
+           
+        }
+        .fa-pinterest:hover,.fa-twitter:hover,.fa-instagram:hover{
+            color: green;
+            transition: 3s;
+            border-radius: 50%;
+           
+        }
+        h6{
+            padding: 4px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        
+       <div class="container">
+        <div class="nav">
+            <div class="logo">JOB<strong>.</strong></div>
+            <div class="menu-icon" id="menu-icon">
+                <i style="color: whitesmoke;" class="fa fa-bars"></i>
+              
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li><br>
+                <li><a href="#">About</a></li><br>
+                <li><a href="#">Business solution</a></li><br>
+                <li class="square"><a href="#">Join Us</a></li>
+
+            </ul>
+        </div>
+        <script>
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+        
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+        
+        <div class="content">
+            <!-- this where your content will be -->
+            <div class="cons">
+                <div class="text">
+                    <h2>Find the right compentent<br> job, right away</h2><br>
+                  <p><input type="text" placeholder="search for any job..."><i  class="fa fa-search"></i></p><br>
+                 <div class="popular">
+                     <div class="poptext">
+                         <h4>Popular:</h4>
+
+                     </div>
+                     <div class="popuweb1">
+                         <h5 class="border-1">Website Design</h5>
+
+                     </div>
+                     <div class="popuweb2">
+                         <h5 class="border-2">Word Press</h5>
+
+                    </div>
+                    <div class="popuweb3">
+                        <h5 class="border-3">Ai Service</h5>
+
+                    </div>
+                 </div>
+
+                </div>
+                <div class="images">
+                    <img src="image.png" height="200">
+
+                </div>
+            </div>
+        </div>
+       </div>
+       <div class="others">
+        <div class="other-text">
+            <h3>Trusted by:</h3>
+        </div>
+        <div class="other-1">
+            <h5>Twitter</h5>
+
+        </div>
+        <div class="other-1">
+          <h5>Google</h5>
+            
+     </div>
+     <div class="other-1">
+         <h5>Amazon</h5>
+            
+     </div>
+     </div>
+     <div class="another-con">
+         <!--another con content-->
+         <h4 class="pop">Popular Services</h4><br>
+        <div class="another-con1">
+            <div class="another-1">
+                <img src="maxresdefault copy.jpeg" height="80">
+   
+            </div>
+            <div class="another-1">
+               <img src="images (15).jpeg" height="80">
+                
+           </div>
+           <div class="another-1">
+               <img src="canva-ai-genereated-art-blog-cover.webp" height="80">
+                
+           </div>
+        </div>
+     </div>
+     <script>
+        const colors = ["orange", "green", "red", "blue"];
+const container = document.querySelector(".container");
+let currentColorIndex = 0;
+
+function changeBackgroundColor() {
+container.style.backgroundColor = colors[currentColorIndex];
+currentColorIndex = (currentColorIndex + 1) % colors.length;
+}
+
+// Call the function to start the color-changing process
+setInterval(changeBackgroundColor, 3000); // Change color every 3 seconds
+
+    </script>
+    <footer>
+        <h3>JOB<strong>.</strong></h3>
+        <div class="social">
+            <div class="socail1">
+                <div class="fa fa-pinterest"></div>
+            </div>
+            <div class="socail1">
+                <div class="fa fa-twitter"></div>
+            </div>
+            <div class="socail1">
+                <div class="fa fa-instagram"></div>
+            </div>
+        </div>
+        <h6>© JOB<strong>.</strong> International LTD 2023</h6>
+
+    </footer>
+    </body>
+</html>
