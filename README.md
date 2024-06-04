@@ -1,1 +1,1 @@
-Welcome to my GitHub! I'm Isaac Darko, passionate about web development. Currently diving into HTML, CSS, and learning JavaScript. Explore my projects and snippets. Let's connect!
+I'm Isaac Darko, deeply passionate about web development. With knowledge in HTML and CSS, I'm currently immersing myself in JavaScript. Explore my projects and snippets as I progress on this journey. Let's connect and learn together!
