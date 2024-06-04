@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>c website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: black;
+                margin: 0;
+                padding-top: 70px;
+            }
+            .nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #212121;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 100;
+            }
+            #nav-2{
+                display: flex;
+                align-items: flex-start;
+            }
+            .logo{
+                color: white;
+                font-weight: bolder;
+                padding-left: 6px;
+            }
+            #nav-2 a{
+                padding: 5px;
+                padding-left: 30px;
+            }
+            #nav-2 a:hover{
+                text-decoration: underline red;
+            }
+            .nav-2,.navbar{
+                display: flex;
+            }
+           .navbar,a{
+               list-style: none;
+               text-decoration: none;
+
+            }
+            .search-container{
+                position: relative;
+            }
+            .fa-search{
+                color: red;
+            }
+            .search-icon{
+                cursor: pointer;
+            }
+            .search-bar{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 30px;
+                padding: 5px;
+                border-radius: 8px;
+            }
+            input{
+                border-radius: 8px;
+            }
+            a{
+                color: white;
+                padding-right: 9px;
+            }
+            .nav{
+                width: 100%;
+                background-color: #212121;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .active{
+                border: 1px solid red;
+                background-color: red;
+                border-radius: 2pc;
+            }
+            .fa-star{
+                color: white;
+            }
+            .container-2{
+                margin-top: 70px;
+            }
+            .row{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .col-2{
+                flex-basis: 40%;
+                min-width: 25px;
+            }
+            .col-2 img{
+                max-width: 95%;
+                padding: 50px 0;
+            }
+            .col-2{
+                font-size: 20px;
+                line-height: 60px;
+                margin: 25px 0;
+            }
+            h1{
+                color: white;
+            }
+            p{
+                margin: 4px;
+                color: white;
+            }
+            .btn{
+                border: 1px solid transparent;
+                background-color: red;
+                border-radius: 2pc;
+                padding: 8px 4px;
+            }
+            .btn:hover{
+                opacity: 0.7;
+                margin: 3px;
+            }
+            .fa-facebook{
+                background-color: #3b599b;
+                padding: 1px 7px;
+                border-radius: 2px 5px;
+                color: white;
+            }
+            .fa-twitter{
+                background-color: #55acee;
+                padding: 1px 7px;
+                border-radius: 2px 5px;
+                color: white;
+                margin-left: 10px;
+            }
+            .fa-facebook:hover{
+                opacity: 0.7;
+                transform: translateY(5px);
+
+            }
+            .fa-twitter:hover{
+                opacity: 0.7;
+                transform: translateY(5px);
+
+            }
+            img{
+                border: 10px dotted  red;
+                border-top: 10px solid white;
+                border-bottom: 10px solid white;
+                width: 290px;
+                height: 290px;
+                border-radius: 50%;
+                animation: rotation 7s reverse linear infinite;
+                margin: auto;
+            }
+            @keyframes rotation{
+                0%{transform: rotate(0deg);}
+                0%{transform: rotate(360deg);}
+            }
+            h4{
+                color: white;
+                font-weight: bolder;
+                text-align: center;
+                font-family: sans-serif;
+                margin-top: 97px;
+            }
+            .cona{
+                color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+           
+            }
+            .tag-1{
+                background-color: red;
+                padding: 1px 3px;
+                text-align: center;
+                border-radius: 5px;
+               margin: 5px;
+
+            }
+            .tag-2{
+                background-color: red;
+                padding: 1px 3px;
+                text-align: center;
+                border-radius: 5px;
+                margin: 5px;
+
+            }
+            .tag-3{
+                background-color: red;
+                padding: 1px 3px;
+                text-align: center;
+                border-radius: 5px;
+                margin: 5px;
+
+            }
+            .tag-1:hover{
+                opacity: 0.7;
+                transform: translateY(5px);
+
+            }
+            .tag-2:hover{
+                opacity: 0.7;
+                transform: translateY(5px);
+
+
+            }
+            .tag-3:hover{
+                opacity: 0.7;
+                transform: translateY(5px);
+
+            }
+            s{
+                color: red;
+            }
+            footer{
+                margin-top: 19%;
+                width: 100%;
+                height: 100%;
+                background-color: #212121;
+                text-align: center;
+                color: white;
+            }
+
+
+            
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="conatiner">
+            <div class="con">
+                <div class="nav">
+                    <div id="nav-2">
+                        <h2 class="logo">MUSI<s>Q</s></h2>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="navbar">
+                        <a href="#" class="active">Account</a>
+                      
+
+                        <div class="search-container">
+                            <div class="search-icon" onclick="toggleSearchBar()">
+                             <i class="fa fa-search"></i>
+                            </div>
+                            <form>
+                         
+                            <input type="search" id="search-bar" class="search-bar" placeholder="Search..." style="display: none;">
+                          </form>
+                          </div>
+                        
+                          <script>
+                            function toggleSearchBar() {
+                              var searchBar = document.getElementById("search-bar");
+                              searchBar.style.display = (searchBar.style.display === "none" || searchBar.style.display === "") ? "block" : "none";
+                              searchBar.value = ""; // Clear the search bar when hiding it
+                            }
+                        
+                            // Add a click event listener to the document to hide the search bar when clicking outside of it
+                            document.addEventListener("click", function (event) {
+                              var searchContainer = document.querySelector(".search-container");
+                              var searchBar = document.getElementById("search-bar");
+                        
+                              // Check if the click event target is not inside the search container
+                              if (!searchContainer.contains(event.target) && searchBar.style.display === "block") {
+                                searchBar.style.display = "none";
+                              }
+                            });
+                          </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-2">
+                    <div class="row">
+                        <div clas="col-2">
+                            <h1>MUsi<s>Q</s></h1>
+                            <p>Musi<s>Q</s>, Elevate yourself yourself by diving into<br> th world of Music through Musi<s>Q</s></p><br>
+                            <a href="#"  id="new" class="btn"><i class="fa fa-star"></i>Download/listern<i class="fa fa-star"></i></a>
+                            <br><br>
+                            <p><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i></p>
+                        </div>
+                        <div clas="col-2">
+                            <img src="1000_F_561484157_cl2Zdnamar1EM1W6OKptBkOqhPqtkFxN.jpeg">
+                        </div>
+                    </div>
+                    <h4>Trending <s>Q</s>s</h4><br><br>
+                    <div class="cona">
+                        <div class="tag-1">
+                            <h5>Sarkodie <br><img src="ab67616d0000b27357412d06e2b512694fa98252.jpeg"><br><br><audio controls><source src="Sarkodie-Ft-Buju-Better-Days-(TrendyBeatz.com).mp3" type="audio/mpeg"></audio><br><br>#Jamz:<br><br>Better days ft BNXN Fka Buju<br><br></h5>
+                        </div>
+                        <div class="tag-2">
+                            <h5>Drake <br><img src="Dfn0ZtKUEAEurwt_h7mnx6.webp"><br><br><audio controls><source src="Drake-Sandra-s-Rose-(HiphopMood.com).mp3" type="audio/mpeg"></audio><br><br>#Scorpion:<br><br>Sandra Rose<br><br></h5>
+                        </div>
+                        <div class="tag-3">
+                            <h5>Asake <br><img src="302498186_137867355611511_5462784524074138864_n.jpeg"><br><br><audio controls><source src="Asake-Dull-(TrendyBeatz.com).mp3" type="audio/mpeg"></audio><br><br>#Mr Money With The Vibe:<br><br>Dull<br><br></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h2>Musi<s>Q</s></h2>
+            <strong>Copyright@ 2021-2023</strong>
+        </footer>
+    </body>
+</html>
